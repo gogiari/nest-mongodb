@@ -10,6 +10,9 @@ async function bootstrap() {
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   app.setViewEngine('hbs');
 
+  // CORS 미들웨어를 추가하여 모든 도메인에서의 요청을 허용
+  app.enableCors();
+
   await app.listen(3000);
 }
 bootstrap();

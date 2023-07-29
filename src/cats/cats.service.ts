@@ -13,6 +13,6 @@ export class CatsService {
   }
 
   async findAll(): Promise<Cat[]> {
-    return this.catModel.find().exec();
+    return this.catModel.find().sort({"id" : 1}).exec();
   }
 }
